@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Member (Tugas2 API)</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .header { background: #f0f0f0; padding: 15px; border-radius: 5px; margin-bottom: 20px; }
+        .section { margin: 20px 0; }
+        .method { border: 1px solid #ddd; margin: 10px 0; padding: 15px; border-radius: 5px; }
+        .method-signature { font-family: monospace; background: #f5f5f5; padding: 5px; border-radius: 3px; }
+        .inheritance { background: #e8f4fd; padding: 10px; border-radius: 5px; margin: 10px 0; }
+        .abstract { background: #fff3cd; padding: 10px; border-radius: 5px; margin: 10px 0; }
+        code { background: #f5f5f5; padding: 2px 4px; border-radius: 3px; font-family: monospace; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Abstract Class Member</h1>
+        <p><strong>Package:</strong> tugas2</p>
+        <div class="inheritance">
+            <p><strong>Inheritance Hierarchy:</strong></p>
+            <p>java.lang.Object<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;tugas2.Member</p>
+        </div>
+        <div class="abstract">
+            <p><strong>Direct Known Subclasses:</strong> Mahasiswa, Dosen, Karyawan</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Class Description</h2>
+        <p>Kelas abstrak Member adalah kontrak dasar untuk semua jenis anggota (Dosen, Karyawan, Mahasiswa). 
+        Menyediakan atribut umum seperti nama, alamat, dan email, serta metode abstrak untuk input data dan notifikasi.</p>
+    </div>
+
+    <div class="section">
+        <h2>Field Summary</h2>
+        <table border="1" style="width: 100%; border-collapse: collapse;">
+            <tr style="background: #f0f0f0;">
+                <th style="padding: 8px;">Modifier and Type</th>
+                <th style="padding: 8px;">Field</th>
+                <th style="padding: 8px;">Description</th>
+            </tr>
+            <tr>
+                <td style="padding: 8px;"><code>private String</code></td>
+                <td style="padding: 8px;"><code>nama</code></td>
+                <td style="padding: 8px;">Member name</td>
+            </tr>
+            <tr>
+                <td style="padding: 8px;"><code>private String</code></td>
+                <td style="padding: 8px;"><code>alamat</code></td>
+                <td style="padding: 8px;">Member address</td>
+            </tr>
+            <tr>
+                <td style="padding: 8px;"><code>private String</code></td>
+                <td style="padding: 8px;"><code>email</code></td>
+                <td style="padding: 8px;">Member email</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>Method Summary</h2>
+        
+        <div class="method">
+            <div class="method-signature">public String getNama()</div>
+            <p><strong>Description:</strong> Mendapatkan nama anggota.</p>
+            <p><strong>Returns:</strong> nama anggota</p>
+        </div>
+
+        <div class="method">
+            <div class="method-signature">public void setNama(String nama)</div>
+            <p><strong>Description:</strong> Mengatur nama anggota.</p>
+            <p><strong>Parameters:</strong> nama - nama anggota</p>
+        </div>
+
+        <div class="method">
+            <div class="method-signature">public String getAlamat()</div>
+            <p><strong>Description:</strong> Mendapatkan alamat anggota.</p>
+            <p><strong>Returns:</strong> alamat anggota</p>
+        </div>
+
+        <div class="method">
+            <div class="method-signature">public void setAlamat(String alamat)</div>
+            <p><strong>Description:</strong> Mengatur alamat anggota.</p>
+            <p><strong>Parameters:</strong> alamat - alamat anggota</p>
+        </div>
+
+        <div class="method">
+            <div class="method-signature">public String getEmail()</div>
+            <p><strong>Description:</strong> Mendapatkan email anggota.</p>
+            <p><strong>Returns:</strong> email anggota</p>
+        </div>
+
+        <div class="method">
+            <div class="method-signature">public void setEmail(String email)</div>
+            <p><strong>Description:</strong> Mengatur email anggota.</p>
+            <p><strong>Parameters:</strong> email - email anggota</p>
+        </div>
+
+        <div class="method">
+            <div class="method-signature">public abstract void tambahData()</div>
+            <p><strong>Description:</strong> Metode abstrak untuk melakukan input data anggota. Implementasi ditentukan oleh kelas turunannya.</p>
+            <p><strong>Note:</strong> This is an abstract method that must be implemented by subclasses.</p>
+        </div>
+
+        <div class="method">
+            <div class="method-signature">public abstract void tampilNotif()</div>
+            <p><strong>Description:</strong> Metode abstrak untuk menampilkan notifikasi setelah data ditambahkan.</p>
+            <p><strong>Note:</strong> This is an abstract method that must be implemented by subclasses.</p>
+        </div>
+    </div>
+</body>
+</html>
